@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+
+    <div>
+      <button @click="handleMenu(1)">홈</button>
+      <button @click="handleMenu(2)">로그인</button>
+      <button @click="handleMenu(3)">회원가입</button>
+      <button @click="handleMenu(4)">마이페이지</button>
+    </div>
+    <hr />
+      <home v-if="state.menu===1" msg="home"></home>
+      <login v-if="state.menu===2" msg="login"></login>
+      <join v-if="state.menu===3" title="회원가입"></join>
+      <mypage v-if="state.menu===4" title="마이페이지"></mypage>
+    <hr />
+    <div>
+      copyright
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from '@/components/Home.vue'
+import Join from '@/components/Join.vue'
+import Login from '@/components/Login.vue'
+import Mypage from '@/components/Mypage.vue'
+import { reactive } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    components : {
+      Home, 
+      Login, 
+      Join,
+      Mypage
+    },
+
+    setup () {
+      const state = reactive ({
+        menu : 1
+      })
+      const handleMenu = (idx) => {
+        state.menu = idx;
+      }
+
+      return {state, handleMenu}
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+
 </style>
