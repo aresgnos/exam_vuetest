@@ -8,7 +8,7 @@
       <button @click="handleMenu(4)">마이페이지</button>
     </div>
     <hr />
-      <home v-if="state.menu===1" msg="home"></home>
+      <home v-if="state.menu===1"></home>
       <login v-if="state.menu===2" msg="login"></login>
       <join v-if="state.menu===3" title="회원가입"></join>
       <mypage v-if="state.menu===4" title="마이페이지"></mypage>

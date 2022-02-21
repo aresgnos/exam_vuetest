@@ -5,7 +5,7 @@ import Join from '@/components/Join.vue';
 describe('Join.vue', () => {
 
     // 컴포넌트 객체 생성 (wrapper=선생님이 만든 변수명이로다)
-    // 부모가 login이고 msg 변수로 전달
+    // 부모가 Join이고 title 변수로 전달
     // 아이디는 aaa, 암호 bbb, chk 체크한 상태로
     const wrapper = mount(Join,
         {

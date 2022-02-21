@@ -12,7 +12,7 @@ describe('Home.vue', () => {
     });
 
     it('2.plus함수가 정확하게 동작하는지 확인', () => {
-        expect(wrapper.vm.plus(3,4)).toBe(7);
+        expect(wrapper.vm.minus(5,4)).toBe(1);
     });
 
 })
