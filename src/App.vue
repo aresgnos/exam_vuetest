@@ -21,9 +21,9 @@
 
 <script>
 import Home from '@/components/Home.vue'
-import Join from '@/components/Join.vue'
+import Join from '@/components/ExJoin.vue'
 import Login from '@/components/Login.vue'
-import Mypage from '@/components/Mypage.vue'
+import Mypage from '@/components/ExMypage.vue'
 import { reactive } from 'vue'
 
   export default {
